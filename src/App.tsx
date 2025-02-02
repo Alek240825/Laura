@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import { useState, useEffect } from "react"
 import './App.css'
-import Home from './pages/Home'
+import Home from './pages/home'
 import Game from './pages/game'
 
 function App() {
