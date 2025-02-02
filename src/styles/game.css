@@ -1,0 +1,129 @@
+.game-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative; /* Aseguramos que los elementos se posicionen de manera relativa */
+  min-height: 100vh;
+  color: white;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.game-container::before {
+  content: ""; /* Crea un pseudo-elemento vacío */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black; /* Fondo negro con opacidad */
+  z-index: -1; /* Coloca el fondo debajo de los demás elementos */
+}
+
+.phrase-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.letter-box {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #f8f3f3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(69, 69, 69, 0.236);
+}
+
+.letter {
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+}
+
+.number {
+  font-size: 10px;
+  color: white;
+}
+
+.input-container {
+  margin-top: 20px;
+}
+
+input {
+  font-size: 18px;
+  padding: 10px;
+  width: 60px;
+  text-align: center;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  border-radius: 5px;
+}
+
+.columns-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1000px;
+  margin-top: 20px;
+  gap: 30px;
+}
+
+.column {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+.sentence-row {
+  margin-bottom: 10px;
+}
+
+.sentence {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.answer {
+  display: flex;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.answer-letter {
+  width: 30px;
+  height: 30px;
+  border: 1px solid white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+}
+
+.selected {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+@media (max-width: 768px) {
+  .columns-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .column {
+    width: 100%;
+  }
+
+  .input-container {
+    margin-top: 10px;
+  }
+
+  input {
+    width: 50px;
+  }
+}
